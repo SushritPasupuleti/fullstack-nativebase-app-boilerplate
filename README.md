@@ -4,6 +4,10 @@
 
 A Fullstack multiplatform application boilerplate for Expo and Next.js with NativeBase to reuse frontend code/designs.
 
+## Note
+
+This approach uses Next version 9, which is 3 versions behind the latests, so this approach is not recommended by me.
+
 ## Setup Instructions
 
 Create Expo app with Next.js for Expo for Web
