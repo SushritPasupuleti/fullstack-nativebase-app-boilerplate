@@ -1,12 +1,13 @@
 import { Text } from "react-native"
+import { Button } from "ui"
 import { CrossPlatformMessage } from "ui/CrossPlatformMessage"
+import { Provider } from "ui/Provider"
 
 export default function App() {
   return (
-    <>
-      <Text>
-        <CrossPlatformMessage />
-      </Text>
-    </>
+    <Provider>
+      <Text>Native</Text>
+      <Button />
+    </Provider>
   )
 }

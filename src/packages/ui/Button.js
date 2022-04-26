@@ -1,4 +1,14 @@
 import * as React from "react";
+import { Button as NBButton, Box } from "native-base";
+
 export const Button = () => {
-  return <button>Boop</button>;
+  return (
+    <Box alignItems="center">
+      <NBButton
+        onPress={() => console.log("boop")}
+      >
+        Boop
+      </NBButton>
+    </Box>
+  );
 };
