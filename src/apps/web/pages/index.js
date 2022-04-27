@@ -1,13 +1,33 @@
 import { Button } from "ui";
 import { CrossPlatformMessage } from "ui/CrossPlatformMessage";
+import { selectAuth } from "ui/redux/reducers/authReducer";
+import { useSelector, useDispatch } from 'react-redux';
 
 export default function Web() {
-  return (
-    <div>
-      <h1>Web</h1>
-      <Button />
-      <br />
-      <CrossPlatformMessage />
-    </div>
-  );
+	const auth = useSelector(selectAuth);
+	const dispatch = useDispatch();
+
+	return (
+		<div>
+			<h1>Web</h1>
+			<Button />
+			<br />
+			<CrossPlatformMessage />
+			<br />
+			{
+				auth.userData && (
+					<div>
+						<h3>User Data Set</h3>
+					</div>
+				)
+			}
+			{
+				!auth.userData && (
+					<div>
+						<h3>User Data Not Set</h3>
+					</div>
+				)
+			}
+		</div >
+	);
 }
