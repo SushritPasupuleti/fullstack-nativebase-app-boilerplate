@@ -5,6 +5,7 @@ import { Provider } from "ui/Provider"
 import { selectAuth } from "ui/redux/reducers/authReducer";
 import { useSelector, useDispatch } from 'react-redux';
 import { SafeAreaView } from 'react-native';
+import AppBar from "ui/components/AppBar";
 
 export default function App() {
 	const auth = useSelector(selectAuth);
@@ -12,7 +13,8 @@ export default function App() {
 
 	return (
 		<Provider>
-			<SafeAreaView>
+			{/* <SafeAreaView> */}
+				<AppBar />
 				<Text>Native</Text>
 				<Button />
 				{
@@ -29,7 +31,7 @@ export default function App() {
 						</View>
 					)
 				}
-			</SafeAreaView>
+			{/* </SafeAreaView> */}
 		</Provider>
 	)
 }
