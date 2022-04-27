@@ -4,6 +4,7 @@ import { CrossPlatformMessage } from "ui/CrossPlatformMessage"
 import { Provider } from "ui/Provider"
 import { selectAuth } from "ui/redux/reducers/authReducer";
 import { useSelector, useDispatch } from 'react-redux';
+import { SafeAreaView } from 'react-native';
 
 export default function App() {
 	const auth = useSelector(selectAuth);
@@ -11,22 +12,24 @@ export default function App() {
 
 	return (
 		<Provider>
-			<Text>Native</Text>
-			<Button />
-			{
-				auth.userData && (
-					<View>
-						<Text>User Data Set</Text>
-					</View>
-				)
-			}
-			{
-				!auth.userData && (
-					<View>
-						<Text>User Data Not Set</Text>
-					</View>
-				)
-			}
+			<SafeAreaView>
+				<Text>Native</Text>
+				<Button />
+				{
+					auth.userData && (
+						<View>
+							<Text>User Data Set</Text>
+						</View>
+					)
+				}
+				{
+					!auth.userData && (
+						<View>
+							<Text>User Data Not Set</Text>
+						</View>
+					)
+				}
+			</SafeAreaView>
 		</Provider>
 	)
 }
