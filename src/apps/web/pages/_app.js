@@ -13,6 +13,10 @@ function MyApp({ Component, pageProps }) {
           name="description"
           content="Expo + Next.js with Turborepo + NativeBase"
         />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, user-scalable=no, user-scalable=0"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Provider>
