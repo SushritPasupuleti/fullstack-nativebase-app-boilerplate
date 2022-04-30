@@ -28,6 +28,18 @@ app.get('/posts', async (req, res) => {
         })
 })
 
+app.get('/posts/:id', async (req, res) => {
+    axios.get(`https://jsonplaceholder.typicode.com/posts/${req.params.id}`)
+        .then(response => {
+            res.status(200).json(response.data);
+        })
+        .catch(ex => {
+            console.log("ex:", ex);
+            res.status(500).json({
+                error: ex.message
+            });
+        })
+})
 
 app.listen(port, () => {
     console.log(`Server listening on port ${port} 🚀`)

@@ -14,6 +14,7 @@ export function NavigationProvider({ children }) {
                         screens: {
                             home: '',
                             user: 'user/:id',
+                            posts: 'posts/:id',
                         },
                     },
                 }),

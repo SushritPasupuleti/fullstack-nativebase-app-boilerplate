@@ -2,7 +2,7 @@ import { ScrollView } from 'native-base';
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getPosts, selectPosts } from '../redux/reducers/postReducer'
-import Post from './Post';
+import Post from './PostItem';
 
 function PostList() {
 
@@ -15,20 +15,20 @@ function PostList() {
         }
     }, [posts])
 
-
     return (
         <>
             {/* <ScrollView> */}
-                {
-                    posts.posts && posts.posts.map(post => (
-                        <Post
-                            id={post.id}
-                            title={post.title}
-                            body={post.body}
-                            userId={post.userId}
-                        />
-                    ))
-                }
+            {
+                posts.posts && posts.posts.map(post => (
+                    <Post
+                        key={post.id}
+                        id={post.id}
+                        title={post.title}
+                        body={post.body}
+                        userId={post.userId}
+                    />
+                ))
+            }
             {/* </ScrollView> */}
         </>
     )

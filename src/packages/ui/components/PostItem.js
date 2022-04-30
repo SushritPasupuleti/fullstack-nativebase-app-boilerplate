@@ -1,5 +1,6 @@
 import { AspectRatio, Box, Center, Heading, HStack, Image, Stack, Text, VStack } from 'native-base'
 import React from 'react'
+import { Link as SolitoLink } from 'solito/link'
 
 export default function Post(props) {
     return (
@@ -15,11 +16,13 @@ export default function Post(props) {
                     backgroundColor: "gray.50"
                 }}>
                     <Stack p="4" space={3}>
-                        <Stack space={2}>
-                            <Heading size="md" ml="-1">
-                                {props.title}
-                            </Heading>
-                        </Stack>
+                        <SolitoLink href={`/posts/${props.id}`} pointerEvents="none" variant="outline" colorScheme="coolGray">
+                            <Stack space={2}>
+                                <Heading size="md" ml="-1">
+                                    {props.title}
+                                </Heading>
+                            </Stack>
+                        </SolitoLink>
                         <Text fontWeight="400">
                             {props.body}
                         </Text>

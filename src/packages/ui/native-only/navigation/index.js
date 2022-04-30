@@ -18,6 +18,7 @@ import {
     Avatar,
 } from "native-base";
 import AuthInNav from '../../components/AuthInNav';
+import PostScreen from '../screens/Post';
 
 const Stack = createNativeStackNavigator()
 
@@ -35,12 +36,16 @@ export function NativeNavigation(props) {
                 name="home"
                 component={HomeScreen}
                 options={{
-                    title: 'Home',
+                    title: 'The One Boilerplate',
                 }}
             />
             <Stack.Screen
                 name="user"
                 component={UserScreen}
+            />
+            <Stack.Screen
+                name="posts"
+                component={PostScreen}
             />
         </Stack.Navigator>
     )

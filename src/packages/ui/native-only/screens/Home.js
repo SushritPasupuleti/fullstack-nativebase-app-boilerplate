@@ -1,14 +1,16 @@
 import { Button, VStack, Center, Text, ScrollView, Stack, Heading } from 'native-base'
 import React from 'react'
 import { Link as SolitoLink } from 'solito/link'
-import Post from '../../components/Post'
 import PostList from '../../components/PostList'
 
 export default function HomeScreen() {
 
     return (
         // <>
-        <ScrollView>
+        <ScrollView
+            _dark={{ bg: 'blueGray.900' }}
+            _light={{ bg: 'blueGray.50' }}
+        >
             <Center
                 flex={1}
                 _dark={{ bg: 'blueGray.900' }}
