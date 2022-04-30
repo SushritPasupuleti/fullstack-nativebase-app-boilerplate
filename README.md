@@ -4,6 +4,15 @@
 
 A Fullstack multiplatform application boilerplate for Expo and Next.js with NativeBase to reuse frontend code/designs.
 
+Projects you should look into: 
+
+- [Solito](https://solito.dev/): To generate a similar monorepo as well as to perform navigation and routing that works with both Next.js and Expo. (The MVP of this approach).
+
+- [NativeBase](https://nativebase.io/): For their excellent UI library that can be used in both Expo and Next.js (The next candidate for MVP).
+
+- [Turborepo](https://turborepo.org/): To work with monorepos.
+
+
 ## Setup
 
 Install dependencies (first run only):
