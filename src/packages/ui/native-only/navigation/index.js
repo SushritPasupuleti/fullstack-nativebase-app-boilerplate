@@ -17,21 +17,17 @@ import {
     Icon,
     Avatar,
 } from "native-base";
+import AuthInNav from '../../components/AuthInNav';
 
 const Stack = createNativeStackNavigator()
 
 export function NativeNavigation(props) {
+
     return (
         <Stack.Navigator
             screenOptions={{
                 headerRight: () => (
-                    <Avatar bg="green.500" source={{
-                        uri: "https://pbs.twimg.com/media/FPCf-iIWQAELe50?format=jpg&name=large"
-                    }}
-                        size="xs"
-                    >
-                        Darth Vader
-                    </Avatar>
+                    <AuthInNav />
                 ),
             }}
         >
