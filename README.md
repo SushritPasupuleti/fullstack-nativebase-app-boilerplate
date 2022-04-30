@@ -58,19 +58,14 @@ yarn server
 
 - Next.js for Web Front end (SSR+ISR+SSG support + full SEO).
 - Expo for Mobile Front end (Fully native).
-- PostgreSQL for Database with Sequelize ORM.
 - NodeJS via Express for Backend.
 - Redux for State Management.
 - NativeBase for UI across both Next and Expo with shared components, layouts.
+
+Recommendations:
+
+- PostgreSQL for Database with Sequelize ORM.
 - Auth using Firebase for both.
-
-## Showcase App
-
-- Simple NavBar + Drawer with Login/Signup/Logout.
-- Simple List of Posts with Search in Tabbed layout.
-- Simple List of Users with Search in Tabbed layout.
-
-(Everything managed via Redux)
 
 ## Can be scaled to
 
