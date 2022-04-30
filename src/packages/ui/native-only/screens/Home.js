@@ -21,7 +21,7 @@ export default function HomeScreen() {
                         <Heading size="md" ml="-1">
                             Hello there
                         </Heading>
-                        <Text fontSize="xs" _light={{
+                        <Text fontSize={12} _light={{
                             color: "violet.500"
                         }} _dark={{
                             color: "violet.400"

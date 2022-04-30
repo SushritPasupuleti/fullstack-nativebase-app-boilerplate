@@ -8,7 +8,6 @@ import { SafeAreaView } from 'react-native';
 import AppBar from "ui/components/AppBar";
 import { NavigationProvider } from "ui/native-only/navigation/Provider";
 import { NativeNavigation } from "ui/native-only/navigation";
-import { MainDrawer } from "ui/native-only/navigation/Drawer";
 
 export default function App() {
 	const auth = useSelector(selectAuth);
@@ -18,27 +17,6 @@ export default function App() {
 		<NavigationProvider>
 			<Provider>
 				<NativeNavigation />
-				{/* <MainDrawer /> */}
-				{/* <SafeAreaView> */}
-				{/* <AppBar /> */}
-				{/* <Text>Native</Text>
-				<Button />
-				{
-					auth.userData && (
-						<View>
-						<Text>User Data Set</Text>
-						</View>
-						)
-					}
-					{
-						!auth.userData && (
-							<View>
-							<Text>User Data Not Set</Text>
-							</View>
-							)
-						} */}
-				{/* <NativeNavigation /> */}
-				{/* </SafeAreaView> */}
 			</Provider>
 		</NavigationProvider>
 	)
