@@ -1,8 +1,12 @@
 import { Button, VStack, Center, Text } from 'native-base'
 import React from 'react'
+import { useSelector } from 'react-redux'
 import { Link as SolitoLink } from 'solito/link'
+import { selectAuth } from '../../redux/reducers/authReducer'
 
 export default function UserScreenNative() {
+    const auth = useSelector(selectAuth);
+
     return (
         <>
             <Center
@@ -10,8 +14,8 @@ export default function UserScreenNative() {
                 _dark={{ bg: 'blueGray.900' }}
                 _light={{ bg: 'blueGray.50' }}
             >
-                <VStack>
-                    <Text>Hello World (User)</Text>
+                <VStack space={4}>
+                    <Text>Hello {`${auth.userData.name.first} ${auth.userData.name.last}`}</Text>
                     <SolitoLink href="/" pointerEvents="none" variant="outline" colorScheme="coolGray">
                         <Button pointerEvents="none">
                             Go Home

@@ -16,6 +16,7 @@ import {
     Avatar,
 } from "native-base";
 import { MaterialIcons } from '@expo/vector-icons';
+import { Link as SolitoLink } from 'solito/link'
 
 export default function AuthInNav() {
     const auth = useSelector(selectAuth);
@@ -31,13 +32,15 @@ export default function AuthInNav() {
             {
                 auth.userData !== null ? (
                     //while auth data is set
-                    <Avatar bg="green.500" source={{
-                        uri: auth.userData.picture.medium
-                    }}
-                        size="xs"
-                    >
-                        {auth.userData.name.last}
-                    </Avatar>
+                    <SolitoLink href={`/user/${auth.userData.name.last}`} pointerEvents="none" variant="outline" colorScheme="coolGray">
+                        <Avatar bg="green.500" source={{
+                            uri: auth.userData.picture.medium
+                        }}
+                            size="xs"
+                        >
+                            {auth.userData.name.last}
+                        </Avatar>
+                    </SolitoLink>
                 ) : (
                     <Button borderRadius="8" padding={2} marginBottom={1}
                         rightIcon={

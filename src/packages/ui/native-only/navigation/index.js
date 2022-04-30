@@ -1,6 +1,6 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import HomeScreenNative from '../screens/Home'
-import UserScreenNative from '../screens/Users'
+import HomeScreen from '../screens/Home'
+import UserScreen from '../screens/Users'
 import { View, TouchableOpacity, } from "react-native"
 import {
     NativeBaseProvider,
@@ -33,14 +33,14 @@ export function NativeNavigation(props) {
         >
             <Stack.Screen
                 name="home"
-                component={HomeScreenNative}
+                component={HomeScreen}
                 options={{
                     title: 'Home',
                 }}
             />
             <Stack.Screen
                 name="user"
-                component={UserScreenNative}
+                component={UserScreen}
             />
         </Stack.Navigator>
     )
