@@ -56,7 +56,7 @@ yarn server
 
 ## Stack
 
-- Next.js for Web Front end (SSR+ISR+SSG support + full SEO).
+- Next.js for Web Front end (SSR+ISR+SSG support + full SEO with [next-seo](https://www.npmjs.com/package/next-seo)).
 - Expo for Mobile Front end (Fully native).
 - NodeJS via Express for Backend.
 - Redux for State Management.
