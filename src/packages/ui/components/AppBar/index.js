@@ -1,6 +1,7 @@
 import { Box, HStack, Icon, IconButton, StatusBar, Text, View } from "native-base";
 import { MaterialIcons } from '@expo/vector-icons';
 import AuthInNav from "../AuthInNav";
+import { Link as SolitoLink } from 'solito/link'
 
 export default function AppBar() {
 
@@ -10,13 +11,15 @@ export default function AppBar() {
             <Box safeAreaTop bg="#6200ee" />
             <HStack bg="#6200ee" px="1" py="3" justifyContent="space-between" alignItems="center" w="100%">
                 <HStack alignItems="center">
-                    {/* <IconButton icon={<Icon size="md" as={MaterialIcons} name="menu" color="white" />} /> */}
-                    <Text color="white" fontSize={20} fontWeight="bold" paddingLeft="2">
-                        Home
-                    </Text>
+                    <SolitoLink href="/" pointerEvents="none" variant="outline" colorScheme="coolGray">
+                        {/* <IconButton icon={<Icon size="md" as={MaterialIcons} name="menu" color="white" />} /> */}
+                        <Text color="white" fontSize={20} fontWeight="bold" paddingLeft="2">
+                            The One Boilerplate
+                        </Text>
+                    </SolitoLink>
                 </HStack>
                 <HStack px="1" py="1">
-                    <AuthInNav/>
+                    <AuthInNav />
                 </HStack>
             </HStack>
         </>
