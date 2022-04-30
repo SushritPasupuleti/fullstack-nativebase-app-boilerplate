@@ -46,6 +46,14 @@ To run the Expo App:
 yarn native
 ```
 
+To run the Express Server:
+
+```bash
+yarn server
+```
+
+> Recommend switching to pm2 for production.
+
 ## Stack
 
 - Next.js for Web Front end (SSR+ISR+SSG support + full SEO).

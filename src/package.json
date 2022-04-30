@@ -11,7 +11,8 @@
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "native": "cd apps/expo && expo start"
+    "native": "cd apps/expo && expo start",
+    "server": "cd apps/server && npm run start"
   },
   "devDependencies": {
     "prettier": "latest",
